@@ -1,16 +1,18 @@
 package Backend_API;
 
 import io.restassured.RestAssured;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
 import static io.restassured.RestAssured.when;
 import static org.hamcrest.Matchers.contains;
+import static org.hamcrest.Matchers.containsString;
 
 public class NovaPoshtaTest {
 
-    //@Test
+    @Test
     public void KucheryavoTest(){
 
         RestAssured.baseURI = "https://api.novaposhta.ua/v2.0/xml/";
@@ -21,7 +23,7 @@ public class NovaPoshtaTest {
                 + "<modelName>Address</modelName>\n"
                 + "<calledMethod>searchSettlements</calledMethod>\n"
                 + "<methodProperties>\n"
-                    + "<CityName>Киї</CityName>\n"
+                    + "<CityName>Кучеряво</CityName>\n"
                     + "<Limit>5</Limit>\n"
                 + "</methodProperties>\n"
                 + "</file>";
@@ -33,8 +35,8 @@ public class NovaPoshtaTest {
         .when().
                 post("v2.0/xml/Address/searchSettlements/").
         then().log().all().
-                assertThat().statusCode(200).
-                body(contains("e718a680-4b33-11e4-ab6d-005056801329"));
+                assertThat().statusCode(200)
+                .body(containsString("Кучерявоволодимирівка"));
 
   }
 
