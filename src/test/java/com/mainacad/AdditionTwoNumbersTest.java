@@ -7,9 +7,13 @@ import static org.junit.Assert.*;
 
 public class AdditionTwoNumbersTest {
 
+    //TestdID|  a | b | expected
+    // 0 | 0 | 0
+    // 2 | 2 | 4
     @Test
-    public void add() {
-        AdditionTwoNumbers twoNumbers = new AdditionTwoNumbers( 0, 0);
-        Assert.assertEquals(1, twoNumbers.add());
+    public void add(int a,  int b, int expected) {
+        AdditionTwoNumbers twoNumbers = new AdditionTwoNumbers( a, b);
+        Assert.assertEquals(expected, twoNumbers.add());
+
     }
 }

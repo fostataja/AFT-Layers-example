@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class RandomGeneratorTest {
 
-    //@Test
+    @Test
     public void resultLessThanOne() {
 
         RandomGenerator rg = new RandomGenerator();
@@ -15,7 +15,7 @@ public class RandomGeneratorTest {
         //Assert.assertEquals( 1.0, actualResult, 0.0);
     }
 
-    //@Test
+    @Test
     public void resultGreaterOrEqualsZero() {
 
         RandomGenerator rg = new RandomGenerator();

@@ -8,7 +8,7 @@ import static org.hamcrest.Matchers.*;
 
 public class RandomGeneratorTest {
 
-    //@Test
+    @Test
     public void generatedNumberInRangeTest(){
         RandomGenerator rg = new RandomGenerator();
         double actualRandomNumber = rg.getRandom();
