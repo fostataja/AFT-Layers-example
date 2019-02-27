@@ -10,10 +10,15 @@ public class AdditionTwoNumbersTest {
     //TestdID|  a | b | expected
     // 0 | 0 | 0
     // 2 | 2 | 4
-    @Test
-    public void add(int a,  int b, int expected) {
+
+    private void add(int a,  int b, int expected) {
         AdditionTwoNumbers twoNumbers = new AdditionTwoNumbers( a, b);
         Assert.assertEquals(expected, twoNumbers.add());
 
+    }
+
+    @Test
+    public void runAddTest() {
+        add(0,0,0);
     }
 }

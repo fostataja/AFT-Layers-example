@@ -15,6 +15,6 @@ public class WebSiteTest {
 
         $(By.name("q")).setValue("Тарифи").pressEnter();
 
-        $("div.b_search_results > ul > li:nth-child(1) > h3 > a").shouldHave(text("000Тарифи"));
+        $("div.b_search_results > ul > li:nth-child(1) > h3 > a").shouldHave(text("Тарифи"));
    }
 }

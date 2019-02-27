@@ -13,6 +13,6 @@ public class RandomGeneratorTest {
         RandomGenerator rg = new RandomGenerator();
         double actualRandomNumber = rg.getRandom();
 
-        Assert.assertThat( actualRandomNumber, greaterThan(1.0));
+        Assert.assertThat( actualRandomNumber, lessThan(1.0));
     }
 }
