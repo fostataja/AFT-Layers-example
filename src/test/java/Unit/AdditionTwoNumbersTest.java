@@ -1,5 +1,6 @@
-package com.mainacad;
+package Unit;
 
+import com.mainacad.AdditionTwoNumbers;
 import org.junit.Assert;
 import org.junit.Test;
 
